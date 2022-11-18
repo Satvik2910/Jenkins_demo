@@ -10,4 +10,8 @@ CMD ["java", "Main"]
 
 EXPOSE 8080
 
+RUN ["javac", "Main.java"]
+
+ENTRYPOINT ["java", "Main"]
+
 
