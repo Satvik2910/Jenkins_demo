@@ -1,9 +1,13 @@
-FROM node:latest
+FROM openjdk:17
 
-WORKDIR /usr/src/app
+RUN mkdir /app
 
-COPY package*.json ./
+COPY . /app
 
-EXPOSE 3000
+WORKDIR /app
 
 CMD ["java", "Main"]
+
+EXPOSE 8080
+
+
